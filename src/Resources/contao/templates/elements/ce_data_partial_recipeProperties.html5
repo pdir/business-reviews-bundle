@@ -1,0 +1,12 @@
+<div class="recipeProperties">
+  <span title="<?= $this->LANG['pdir_rw_text_prepTime'] ?> <?= $this->prepTime ?>">
+    <time datetime="" itemprop="prepTime"><?= $this->prepTime ?></time>
+  </span>
+  <span title="<?= $this->LANG['pdir_rw_text_cookTime'] ?> <?= $this->cookTime ?>">
+    <time datetime="" itemprop="cookTime"><?= $this->cookTime ?></time>
+  </span>
+  <span title="<?= $this->LANG['pdir_rw_text_totalTime'] ?> <?= $this->totalTime ?>">
+    <time datetime="" itemprop="totalTime"><?= $this->totalTime ?></time>
+  </span>
+  <?= $this->itemProp('recipeYield', 'span') ?>
+</div>

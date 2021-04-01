@@ -1,0 +1,10 @@
+<div class="name">
+  <?php if($this->brand): ?><span itemprop="brand"><?= $this->brand ?></span><?php endif; ?>
+    <a href="<?= $this->link ?>" itemprop="url"><?= $this->itemProp('name', 'span') ?></a>
+  <?php if($this->description): ?>
+    <span itemprop="description"><?= $this->description; ?></span>
+  <?php endif; ?>
+  <?php if($this->author): ?>
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person"><?= $this->author; ?></span>
+  <?php endif; ?>
+</div>

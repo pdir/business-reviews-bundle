@@ -1,0 +1,17 @@
+<div class="eventProperties">
+  <div class="eventProperties" itemprop="location" itemscope itemtype="http://schema.org/Place">
+    <?= $this->render('address'); ?>
+  </div>
+  <?php if($this->startDate->toStrDate == $this->endDate->toStrDate): ?>
+    <span itemprop="startDate" content="<?= $this->startDate->toISO ?>">
+      <?= $this->startDate->toStrDate ?>, <?= $this->startDate->toStrTime ?>
+    </span>
+  <?php else:?>
+    <span itemprop="startDate" content="<?= $this->startDate->toISO ?>">
+      <?= $this->startDate->toStr ?>
+    </span> -
+    <span itemprop="endDate" content="<?= $this->endDate->toISO ?>">
+      <?= $this->endDate->toStr ?>
+    </span>
+  <?php endif; ?>
+</div>

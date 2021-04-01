@@ -1,0 +1,9 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<div class="ce_review_widget">
+  ### Business Reviews -> <?= $this->elementType ?> ###
+</div>
+
+<?php $this->endblock(); ?>

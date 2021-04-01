@@ -1,0 +1,5 @@
+<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+  <?= $this->itemProp('streetAddress', 'span')?>, <?= $this->itemProp('postalCode', 'span')?> <?= $this->itemProp('addressLocality', 'span')?>, <?= $this->itemProp('addressRegion', 'span')?>
+</div>
+<?= $this->itemProp('telephone', 'span')?>
+<!-- a itemprop="url" href="http://www.greatfood.com">www.greatfood.com</a -->

@@ -1,0 +1,5 @@
+<div class="reviewPorperties">
+  <?= $this->itemProp('servesCuisine',  'span') ?>
+  <?= (!empty($this->servesCuisine) && !empty($this->priceRange)) ? ' | ' : ''; ?>
+  <?= $this->itemProp('priceRange',  'span') ?>
+</div>

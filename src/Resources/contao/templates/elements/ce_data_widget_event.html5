@@ -1,0 +1,17 @@
+<?php $this->block('content'); ?>
+
+<div class="ce_data_widget <?= $this->rwClass ?> <?= $this->class ?> block" <?= $this->cssID ?>>
+  <div class="element_type <?= $this->floating?>" itemscope="" itemtype="http://schema.org/<?= $this->elementType ?>">
+    <div class="image" itemprop="image" >
+      <?php if ($this->addImage): $this->insert('image', $this->arrData); endif; ?>
+    </div>
+    <div class="text">
+      <?= $this->render('name') ?>
+      <?= $this->render('eventProperties') ?>
+      <?= $this->render('aggregateRating') ?>
+    </div>
+  </div>
+  <div class="powered"><a href="<?= $this->poweredLink ?>"><?= $this->powered ?></a></div>
+</div>
+
+<?php $this->endblock(); ?>

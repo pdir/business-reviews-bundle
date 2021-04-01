@@ -1,0 +1,21 @@
+<?php $this->block('content'); ?>
+
+<div class="ce_data_widget <?= $this->rwClass ?> <?= $this->class ?> block" <?= $this->cssID ?>>
+  <div itemscope="" itemtype="http://schema.org/<?= $this->elementType ?>">
+    <div class="element_type <?= $this->floating?>" itemprop="itemReviewed" itemscope itemtype="https://schema.org/<?= $this->pdir_rw_element_subtype ?>">
+      <div class="image" itemprop="image" >
+        <?php if ($this->addImage): $this->insert('image', $this->arrData); endif; ?>
+      </div>
+      <div class="text">
+        <?= $this->render('name') ?>
+        <?= $this->render('address') ?>
+        <?= $this->render('reviewProperties') ?>
+        <?= $this->render('aggregateRating') ?>
+      </div>
+    </div>
+    <?php if($this->author): ?><span style="display:none;" itemprop="author" itemscope itemtype="https://schema.org/Person"><?= $this->author; ?></span><?php endif; ?>
+  </div>
+  <div class="powered"><a href="<?= $this->poweredLink ?>"><?= $this->powered ?></a></div>
+</div>
+
+<?php $this->endblock(); ?>

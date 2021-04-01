@@ -1,0 +1,8 @@
+<div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+  <a href="<?= $this->link ?>" title="<?= $this->linkTitle ?>" target="_blank" itemprop="url">
+    <?= $this->linkTitle ?>
+  </a>
+  <?= $this->itemProp('ratingValue', 'span') ?> <?= $this->LANG['pdir_rw_text_rating_of'] ?>
+  <?= $this->itemProp('bestRating', 'span') ?>
+  (<?= $this->itemProp('ratingCount', 'span') ?>&nbsp;<?= $this->ratingText ?>)
+</div>

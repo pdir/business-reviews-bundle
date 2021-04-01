@@ -1,0 +1,49 @@
+.ce_data_widget {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+
+  .element_type {
+    display: flex;
+    justify-content: center;
+
+    .text {
+      // name
+      *[itemprop="name"],
+      // rating
+      *[itemprop="ratingValue"],
+      *[itemprop="bestRating"] { font-weight: bold; }
+      *[itemprop="ratingCount"] { }
+      // recipe
+      time,*[itemprop="recipeYield"] {
+        font-style: italic;
+        background-size: 14px 14px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        padding-left: 16px;
+      }
+      *[itemprop="prepTime"] { background-image: url("../img/icon_prepTime.svg"); }
+      *[itemprop="cookTime"] { background-image: url("../img/icon_cookTime.svg"); }
+      *[itemprop="totalTime"] { background-image: url("../img/icon_totalTime.svg"); }
+      *[itemprop="recipeYield"] { background-image: url("../img/icon_recipeYield.svg"); }
+      // restaurant review
+      *[itemprop="servesCuisine"],
+      *[itemprop="priceRange"],
+      // event
+      *[itemprop="startDate"],
+      *[itemprop="endDate"] { font-style: italic; }
+    }
+  }
+
+  .left  { flex-flow: row; .text { text-align: left; }}
+  .right { flex-flow: row-reverse; .text { text-align: right; }}
+  .above { flex-flow: column; }
+  .below { flex-flow: column-reverse;}
+
+  .powered {
+    text-align: center;
+    font-size: 0.8em;
+    color: #a7a7a7;
+    a { text-decoration: none; }
+  }
+}
