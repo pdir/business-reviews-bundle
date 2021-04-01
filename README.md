@@ -71,7 +71,7 @@ System requirements
 Installation & Configuration
 ----------------------------
 
-see documentation at https://docs.pdir.de/contao-business-reviews/  
+see documentation at https://pdir.de/docs/de/contao/extensions/business-reviews/  
 
 Demo
 ----
