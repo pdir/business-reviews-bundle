@@ -60,7 +60,8 @@ https://pdir.de/contao-business-reviews/
 Screenshot
 -----------
 
-![screenshot](add github link)
+![Frontend](https://github.com/pdir/screenshots/blob/master/business-reviews-bundle/contao-business-reviews-screenshot.png)
+![Backend](https://github.com/pdir/screenshots/blob/master/business-reviews-bundle/contao-business-reviews-backend-screenshot.png)
 
 System requirements
 -------------------
