@@ -16,16 +16,16 @@ Ideal für Restaurants, Einzelhandelsgeschäfte, Franchise-Nehmer, Immobilienunt
 und Gästehäusern und fast jedes Unternehmen mit einer Website und Bewertungen von unterschiedlichen
 Plattformen.
 
-Ihre Vorteile
+Deine Vorteile
 
 Freie Version
 * Manuelle Bewertungen anzeigen
 * Standardvorlage für Text Bewertungen
 
 Pro-Version
-* Verwenden Sie verschiedene Vorlagen, um Bewertungen anzuzeigen
+* Verwende verschiedene Vorlagen, um Bewertungen anzuzeigen
 * Anzeige von bis zu 5 Geschäftsbewertungen verschiedener Plattformen (Google My Business, Facebook, Trusted Shops)
-* Zeigen Sie detaillierte Geschäftsinformationen wie Name, Website, Google My Business Seite und mehr an
+* Zeige detaillierte Geschäftsinformationen wie Name, Website, Google My Business Seite und mehr an
 * Garantierte Unterstützung der neuesten oder aktuellen Version von Contao LTS
 * Genauere Angabe von Organisations- und Unternehmenstypen
 
@@ -76,6 +76,7 @@ Installation & Configuration
 
 see documentation at https://pdir.de/docs/de/contao/extensions/business-reviews/  
 
+
 Demo
 ----
 
@@ -95,5 +96,5 @@ You can buy a license at https://pdir.de/business-reviews/
 
 ---
   
-\* Google My Business, Facebook und Trusted Shops sind eingetragene Warenzeichen einer Drittpartei und stehen in keiner Verbindung zur pdir GmbH oder der Business Review Erweiterung für Contao.
+Google My Business, Facebook und Trusted Shops sind eingetragene Warenzeichen einer Drittpartei und stehen in keiner Verbindung zur pdir GmbH oder der Business Review Erweiterung für Contao.
 DIES IST EINE FREIE VERSION MIT EINGESCHRÄNGTEM FUNKTIONSUMFANG, DIE DURCH DEN KAUF EINER LIZENZ ZUR VOLLVERSION UMGEWANDELT WERDEN KANN.

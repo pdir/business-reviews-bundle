@@ -98,7 +98,7 @@ class ReviewWidget extends ContentElement
      *
      * @return string
      */
-    private function unCamelcase($str)
+    public function unCamelcase($str)
     {
         $str = preg_replace('/([a-z])([A-Z])/', '\\1_\\2', $str);
 
@@ -112,7 +112,7 @@ class ReviewWidget extends ContentElement
      *
      * @return stdClass
      */
-    private function prepareDate($field)
+    public function prepareDate($field)
     {
         $d = new stdClass();
         $d->toISO = Date::parse('Y-m-dTH:i', $field);
@@ -131,7 +131,7 @@ class ReviewWidget extends ContentElement
      *
      * @return string
      */
-    private function itemProp($itemProp, $tag)
+    public function itemProp($itemProp, $tag)
     {
         $fullItemProp = "pdir_rw_text_$itemProp";
         $itemValue = $this->$fullItemProp;
@@ -147,7 +147,7 @@ class ReviewWidget extends ContentElement
      *
      * @return string
      */
-    private function render($name)
+    public function render($name)
     {
         // load the requested partial template
         $partial = new FrontendTemplate("ce_data_partial_$name");

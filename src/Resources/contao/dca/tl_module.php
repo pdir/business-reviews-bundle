@@ -344,7 +344,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_startDate'] = [
     'inputType' => 'text',
     'eval' => ['rgxp' => 'datim', 'datepicker' => true, 'mandatory' => true, 'tl_class' => 'w50 wizard'],
     'load_callback' => ['Pdir\\BusinessReviewsBundle\\Dca\\tl_module', 'loadDate'],
-    'sql' => 'int(10) NULL',
+    'sql' => "varchar(10) NOT NULL default ''"
 ];
 
 $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_endDate'] = [
@@ -357,7 +357,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_endDate'] = [
     'inputType' => 'text',
     'eval' => ['rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'w50 wizard'],
     'load_callback' => ['Pdir\\BusinessReviewsBundle\\Dca\\tl_module', 'loadDate'],
-    'sql' => 'int(10) NULL',
+    'sql' => "varchar(10) NOT NULL default ''"
 ];
 
 //-- Image ---

@@ -19,9 +19,9 @@ $tableName = 'tl_content';
 
 $GLOBALS['TL_DCA'][$tableName]['palettes']['__selector__'] = array_merge($GLOBALS['TL_DCA'][$tableName]['palettes']['__selector__'], ['pdir_rw_review_type', 'pdir_rw_element_type', 'pdir_rw_element_subtype', 'addImage', 'overwriteMeta']);
 
-$GLOBALS['TL_DCA'][$tableName]['palettes']['pdirReviewWidget'] = '{type_legend},type,headline,pdir_rw_review_type;{template_legend:hide},customTpl;{image_legend},addImage;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA'][$tableName]['palettes']['pdirReviewWidget'] = '{type_legend},type,headline,pdir_rw_review_type;{image_legend},addImage;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
-$GLOBALS['TL_DCA'][$tableName]['subpalettes']['pdir_rw_review_type_rText'] = ';{pdir_rw_text_legend},pdir_rw_element_type;pdir_rw_text_name,pdir_rw_text_brand,pdir_rw_text_description,pdir_rw_text_linkTitle,pdir_rw_text_link,pdir_rw_text_ratingValue,pdir_rw_text_bestRating,pdir_rw_text_ratingCount,pdir_rw_text_ratingText;';
+$GLOBALS['TL_DCA'][$tableName]['subpalettes']['pdir_rw_review_type_rText'] = ';{pdir_rw_text_legend},pdir_rw_element_type;pdir_rw_text_name,pdir_rw_text_brand,pdir_rw_text_description,pdir_rw_text_linkTitle,pdir_rw_text_link,pdir_rw_text_ratingValue,pdir_rw_text_bestRating,pdir_rw_text_ratingCount,pdir_rw_text_ratingText;{template_legend:hide},customTpl;';
 $GLOBALS['TL_DCA'][$tableName]['subpalettes']['pdir_rw_review_type_rCarousel'] = ';{pdir_rw_legend},pdir_rw_not_available;';
 $GLOBALS['TL_DCA'][$tableName]['subpalettes']['pdir_rw_review_type_rStars'] = ';{pdir_rw_legend},pdir_rw_not_available;';
 
@@ -354,7 +354,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_startDate'] = [
     'inputType' => 'text',
     'eval' => ['rgxp' => 'datim', 'datepicker' => true, 'mandatory' => true, 'tl_class' => 'w50 wizard'],
     'load_callback' => ['Pdir\\BusinessReviewsBundle\\Dca\\tl_content', 'loadDate'],
-    'sql' => 'int(10) NULL',
+    'sql' => "varchar(10) NOT NULL default ''"
 ];
 
 $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_endDate'] = [
@@ -367,7 +367,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_endDate'] = [
     'inputType' => 'text',
     'eval' => ['rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'w50 wizard'],
     'load_callback' => ['Pdir\\BusinessReviewsBundle\\Dca\\tl_content', 'loadDate'],
-    'sql' => 'int(10) NULL',
+    'sql' => "varchar(10) NOT NULL default ''"
 ];
 
 //------------------------------------------------------------------------
