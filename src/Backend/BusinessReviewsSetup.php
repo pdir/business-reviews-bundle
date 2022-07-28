@@ -24,7 +24,7 @@ class BusinessReviewsSetup extends BackendModule
     /**
      * business-reviews-bundle version.
      */
-    const VERSION = '1.0.0';
+    const VERSION = '1.1.0';
 
     /*
      * here you can add easily new platforms, all lang files and templates are using this list
