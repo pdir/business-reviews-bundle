@@ -91,7 +91,7 @@ License
 -------
 This is a free/commercial extension for Contao Open Source CMS  
 You can buy a license at https://pdir.de/business-reviews/  
-2021 pdir GmbH - All-rights-reserved  
+2022 pdir GmbH - All-rights-reserved  
 
 ---
   
