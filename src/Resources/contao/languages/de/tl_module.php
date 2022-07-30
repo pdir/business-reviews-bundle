@@ -21,8 +21,10 @@ $GLOBALS['TL_LANG']['tl_module']['pdir_rw_text_legend'] = $GLOBALS['TL_LANG']['t
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_legend'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_legend'];
 
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_review_type_options']['rText'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options']['rText'];
-$GLOBALS['TL_LANG']['tl_module']['pdir_rw_review_type_options']['rCarousel'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options']['rCarousel'];
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_review_type_options']['rStars'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options']['rStars'];
+$GLOBALS['TL_LANG']['tl_module']['pdir_rw_review_type_options']['rCarousel'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options']['rCarousel'];
+$GLOBALS['TL_LANG']['tl_module']['pdir_rw_review_type_options']['rSticker'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options']['rSticker'];
+$GLOBALS['TL_LANG']['tl_module']['pdir_rw_review_type_options']['rCard'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options']['rCard'];
 
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_element_type_options']['LocalBusiness'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_element_type_options']['LocalBusiness'];
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_element_type_options']['Product'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_element_type_options']['Product'];

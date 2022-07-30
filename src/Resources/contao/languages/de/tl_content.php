@@ -24,8 +24,10 @@ $strPlatforms = BusinessReviewsSetup::strPlatforms('oder');
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_legend'] = 'Lizenzhinweis';
 
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rText'] = 'Text Widget';
-$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rCarousel'] = 'Karussell Widget (Vollversion oder Plugin notwendig)';
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rStars'] = 'Sterne Widget (Vollversion oder Plugin notwendig)';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rCarousel'] = 'Karussell Widget (Vollversion oder Plugin notwendig)';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rSticker'] = 'Sticker Widget (Vollversion oder Plugin notwendig)';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rCard'] = 'Card Widget (Vollversion oder Plugin notwendig)';
 
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options']['LocalBusiness'] = 'Lokales Geschäft';
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options']['Product'] = 'Produkt';

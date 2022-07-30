@@ -114,7 +114,16 @@ class BusinessReviewsSetup extends BackendModule
 
         $this->Template->allVersions = sprintf(
             $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['template_p'],
-            implode(', ', array_map(function ($a) { return $a['product']; }, $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['editions']))
+            implode(', ',
+                array_map(
+                    function($version) { return $version['product']; },
+                    array_filter(
+                        $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['editions'],
+                        function($key) { return $key !== 'free'; },
+                        ARRAY_FILTER_USE_KEY
+                    )
+                )
+            )
         );
     }
 }

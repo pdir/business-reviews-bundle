@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## 1.1.0 – 2022-07-28
+## 1.1.0 – 2022-07-30
 
 - [Changed] add support for PHP 8.x
 
