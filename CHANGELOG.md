@@ -1,5 +1,19 @@
 # Changelog
 
-## [1.0.0](https://github.com/pdir/business-reviews-bundle/tree/1.0.0) – 2021-04-01
+[//]: <> (
+Types of changes
+    Added for new Addeds.
+    Changed for changes in existing functionality.
+    Deprecated for soon-to-be removed Addeds.
+    Removed for now removed Addeds.
+    Fixed for any bug fixes.
+    Security in case of vulnerabilities.
+)
 
-- first release
+## 1.1.0 – 2022-07-30
+
+- [Changed] add support for PHP 8.x
+
+## 1.0.0 – 2022-04-01
+
+- [Added] Standard template for review

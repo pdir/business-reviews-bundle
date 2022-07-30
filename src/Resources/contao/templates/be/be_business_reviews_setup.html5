@@ -43,7 +43,7 @@
                 <div class="teaser"><?= $ref['teaser']; ?></div>
               </div>
 
-              <?php if($data['product_link'] && $ref['button_text']): ?>
+              <?php if(isset($data['product_link']) && isset($ref['button_text'])): ?>
               <div>
                 <a href="<?= $data['product_link'] ?>"><?= $ref['button_text'] ?></a>
               </div>

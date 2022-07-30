@@ -3,7 +3,7 @@
 /*
  * Contao business reviews bundle for Contao Open Source CMS
  *
- * Copyright (c) 2021 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2022 pdir / digital agentur // pdir GmbH
  *
  * @package    business-reviews-bundle
  * @link       https://pdir.de/business-reviews/
@@ -20,7 +20,7 @@ $assetsDir = 'bundles/pdirbusinessreviews';
 /*
  * Backend modules
  */
-if (!is_array($GLOBALS['BE_MOD']['pdir'])) {
+if (!isset($GLOBALS['BE_MOD']['pdir'])) {
     array_insert($GLOBALS['BE_MOD'], 1, ['pdir' => []]);
 }
 

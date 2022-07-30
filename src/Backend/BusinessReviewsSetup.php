@@ -3,7 +3,7 @@
 /*
  * Contao business reviews bundle for Contao Open Source CMS
  *
- * Copyright (c) 2021 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2022 pdir / digital agentur // pdir GmbH
  *
  * @package    business-reviews-bundle
  * @link       https://pdir.de/business-reviews/
@@ -24,7 +24,7 @@ class BusinessReviewsSetup extends BackendModule
     /**
      * business-reviews-bundle version.
      */
-    const VERSION = '1.0.0';
+    const VERSION = '1.1.0';
 
     /*
      * here you can add easily new platforms, all lang files and templates are using this list

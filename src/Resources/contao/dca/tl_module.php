@@ -3,7 +3,7 @@
 /*
  * Contao business reviews bundle for Contao Open Source CMS
  *
- * Copyright (c) 2021 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2022 pdir / digital agentur // pdir GmbH
  *
  * @package    business-reviews-bundle
  * @link       https://pdir.de/business-reviews/
@@ -47,7 +47,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_review_type'] = [
     'label' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options'],
+    'options' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options'],
     'eval' => [
         'submitOnChange' => true,
         'tl_class' => 'w50',
@@ -59,7 +59,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_element_type'] = [
     'label' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options'],
+    'options' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options'],
     'eval' => [
         'submitOnChange' => true,
         'includeBlankOption' => true,
@@ -286,7 +286,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_element_subtype'] = [
     'label' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_subtype'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_subtype_options'],
+    'options' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_subtype_options'],
     'eval' => [
         'submitOnChange' => true,
         'tl_class' => 'w50',
