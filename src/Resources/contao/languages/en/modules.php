@@ -20,7 +20,7 @@ use Pdir\BusinessReviewsBundle\Backend\BusinessReviewsSetup;
 $strPlatforms = BusinessReviewsSetup::strPlatforms('und');
 $selectPlatforms = BusinessReviewsSetup::selectPlatforms();
 
-$GLOBALS['TL_LANG']['MOD']['pdir'][0] = 'pdir Apps';
+$GLOBALS['TL_LANG']['MOD']['pdir'] = 'pdir Apps';
 $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['type'] = 'Business-Reviews';
 
 $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup'][0] = 'Business Reviews';
