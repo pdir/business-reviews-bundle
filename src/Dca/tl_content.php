@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * Contao business reviews bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2024 pdir / digital agentur // pdir GmbH
  *
  * @package    business-reviews-bundle
  * @link       https://pdir.de/business-reviews/

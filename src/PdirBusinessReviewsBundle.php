@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * Contao business reviews bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2024 pdir / digital agentur // pdir GmbH
  *
  * @package    business-reviews-bundle
  * @link       https://pdir.de/business-reviews/
@@ -26,4 +28,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class PdirBusinessReviewsBundle extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }
