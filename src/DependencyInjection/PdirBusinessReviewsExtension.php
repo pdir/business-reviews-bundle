@@ -31,11 +31,8 @@ class PdirBusinessReviewsExtension extends Extension
      */
     public function load(array $mergedConfig, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader(
-            $container,
-            new FileLocator(__DIR__.'/../Resources/config')
-        );
-        $loader->load('listener.yml');
-        $loader->load('services.yml');
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
+        $loader->load('controller.yaml');
+        $loader->load('services.yaml');
     }
 }
