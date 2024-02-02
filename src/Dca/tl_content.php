@@ -20,6 +20,7 @@ declare(strict_types=1);
 namespace Pdir\BusinessReviewsBundle\Dca;
 
 use Contao\Backend;
+use Contao\DataContainer;
 
 class tl_content extends Backend
 {
@@ -28,13 +29,13 @@ class tl_content extends Backend
      *
      * @return string
      */
-    public function freeVersionExplanation(\DataContainer $dc)
+    public function freeVersionExplanation(DataContainer $dc): string
     {
-        return sprintf('<div style="color: #4b85ba;
+        return \sprintf('<div style="color: #4b85ba;
             background: #eff5fa;
             padding: 10px;
             border-radius: 3px;">%s</div>',
-            str_replace('{type_id}', $dc->pdir_rw_review_type, $GLOBALS['TL_LANG']['tl_content']['freeVersionExplanation'])
+            \str_replace('{type_id}', $dc->pdir_rw_review_type, $GLOBALS['TL_LANG']['tl_content']['freeVersionExplanation'])
         );
     }
 
@@ -45,8 +46,8 @@ class tl_content extends Backend
      *
      * @return int
      */
-    public function loadDate($value)
+    public function loadDate($value): int
     {
-        return strtotime('1970-01-01 '.date('H:i:s', $value));
+        return \strtotime('1970-01-01 '.date('H:i:s', $value));
     }
 }

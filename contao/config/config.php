@@ -15,16 +15,20 @@
  * file that was distributed with this source code.
  */
 
+use Contao\ArrayUtil;
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
+
 $assetsDir = 'bundles/pdirbusinessreviews';
 
 /*
  * Backend modules
  */
 if (!isset($GLOBALS['BE_MOD']['pdir'])) {
-    array_insert($GLOBALS['BE_MOD'], 1, ['pdir' => []]);
+    ArrayUtil::arrayInsert($GLOBALS['BE_MOD'], 1, ['pdir' => []]);
 }
 
-array_insert($GLOBALS['BE_MOD']['pdir'], 0, [
+ArrayUtil::arrayInsert($GLOBALS['BE_MOD']['pdir'], 0, [
         'businessReviewsSetup' => [
             'callback' => 'Pdir\\BusinessReviewsBundle\\Backend\\BusinessReviewsSetup',
         ],
@@ -40,7 +44,7 @@ $GLOBALS['FE_MOD']['pdir']['pdirReviewWidget'] = 'Pdir\\BusinessReviewsBundle\\F
 /*
  * Javascript & Stylesheet for Backend
  */
-if (TL_MODE === 'BE') {
+if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
 //    $GLOBALS['TL_JAVASCRIPT'][] = $assetsDir.'/js/reviews_backend.js';
     $GLOBALS['TL_CSS'][] = $assetsDir.'/css/reviews_backend.scss|static';
 }

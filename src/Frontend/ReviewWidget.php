@@ -29,9 +29,9 @@ use stdClass;
 
 class ReviewWidget extends ContentElement
 {
-    public $strTemplate = 'ce_data_widget';
+    public string $strTemplate = 'ce_data_widget';
 
-    protected $assetsDir = 'bundles/pdirbusinessreviews';
+    protected string $assetsDir = 'bundles/pdirbusinessreviews';
 
     /**
      * Display a wildcard in the back end.
@@ -40,7 +40,7 @@ class ReviewWidget extends ContentElement
      */
     public function generate()
     {
-        if (TL_MODE === 'BE') {
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             $this->strTemplate = 'be_wildcard';
             $this->Template = new BackendTemplate($this->strTemplate);
             $r0 = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_review_type_options'];
@@ -52,17 +52,17 @@ class ReviewWidget extends ContentElement
             return $this->Template->parse();
         }
 
-        if (TL_MODE === 'FE' && $this->invisible) {
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isFrontendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')) && $this->invisible) {
             return 0;
         }
 
         // add css
-        if (TL_MODE === 'FE') {
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isFrontendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             $GLOBALS['TL_CSS'][] = $this->assetsDir.'/css/reviews.scss|static';
         }
 
         // set template by element type if no custom template is set
-        if (TL_MODE === 'FE' && 'ce_data_widget' === $this->strTemplate) {
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isFrontendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')) && 'ce_data_widget' === $this->strTemplate) {
             $GLOBALS['TL_CSS'][] = $this->assetsDir.'/css/reviews.scss|static';
             $this->strTemplate .= '_'.$this->unCamelcase($this->pdir_rw_element_type);
         }
@@ -76,13 +76,13 @@ class ReviewWidget extends ContentElement
         if ($this->addImage && $this->singleSRC) {
             $objModel = FilesModel::findByUuid($this->singleSRC);
 
-            if (null !== $objModel && is_file(System::getContainer()->getParameter('kernel.project_dir').'/'.$objModel->path)) {
+            if (null !== $objModel && \is_file(System::getContainer()->getParameter('kernel.project_dir').'/'.$objModel->path)) {
                 $this->singleSRC = $objModel->path;
                 $this->addImageToTemplate($this->Template, $this->arrData, null, null, $objModel);
             }
         }
 
-        $this->Template->rwClass = strtolower($this->pdir_rw_element_type);
+        $this->Template->rwClass = \strtolower($this->pdir_rw_element_type);
         $this->Template->cssID = !empty($this->cssID[0]) ? ' id="'.$this->cssID[0].'"' : '';
         $this->Template->elementType = $this->pdir_rw_element_type;
         $this->Template->LANG = $GLOBALS['TL_LANG']['CTE']['pdirReviewWidget'];
@@ -100,11 +100,11 @@ class ReviewWidget extends ContentElement
      *
      * @return string
      */
-    public function unCamelcase($str)
+    public function unCamelcase($str): string
     {
-        $str = preg_replace('/([a-z])([A-Z])/', '\\1_\\2', $str);
+        $str = \preg_replace('/([a-z])([A-Z])/', '\\1_\\2', $str);
 
-        return strtolower($str);
+        return \strtolower($str);
     }
 
     /**
@@ -114,7 +114,7 @@ class ReviewWidget extends ContentElement
      *
      * @return stdClass
      */
-    public function prepareDate($field)
+    public function prepareDate($field): stdClass
     {
         $d = new stdClass();
         $d->toISO = Date::parse('Y-m-dTH:i', $field);
@@ -133,7 +133,7 @@ class ReviewWidget extends ContentElement
      *
      * @return string
      */
-    public function itemProp($itemProp, $tag)
+    public function itemProp($itemProp, $tag): string
     {
         $fullItemProp = "pdir_rw_text_$itemProp";
         $itemValue = $this->$fullItemProp;
@@ -149,7 +149,7 @@ class ReviewWidget extends ContentElement
      *
      * @return string
      */
-    public function render($name)
+    public function render($name): string
     {
         // load the requested partial template
         $partial = new FrontendTemplate("ce_data_partial_$name");

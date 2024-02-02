@@ -15,9 +15,13 @@
  * file that was distributed with this source code.
  */
 
+use Contao\Controller;
+use Contao\DataContainer;
+use Contao\System;
+
 $tableName = 'tl_content';
 
-$GLOBALS['TL_DCA'][$tableName]['palettes']['__selector__'] = array_merge($GLOBALS['TL_DCA'][$tableName]['palettes']['__selector__'], ['pdir_rw_review_type', 'pdir_rw_element_type', 'pdir_rw_element_subtype', 'addImage', 'overwriteMeta']);
+$GLOBALS['TL_DCA'][$tableName]['palettes']['__selector__'] = \array_merge($GLOBALS['TL_DCA'][$tableName]['palettes']['__selector__'], ['pdir_rw_review_type', 'pdir_rw_element_type', 'pdir_rw_element_subtype', 'addImage', 'overwriteMeta']);
 
 $GLOBALS['TL_DCA'][$tableName]['palettes']['pdirReviewWidget'] = '{type_legend},type,headline,pdir_rw_review_type;{image_legend},addImage;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
@@ -346,7 +350,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_location'] = [
 
 $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_startDate'] = [
     'label' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_startDate'],
-    'default' => time(),
+    'default' => \time(),
     'exclude' => true,
     'filter' => true,
     'sorting' => true,
@@ -359,7 +363,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_startDate'] = [
 
 $GLOBALS['TL_DCA'][$tableName]['fields']['pdir_rw_text_endDate'] = [
     'label' => &$GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_endDate'],
-    'default' => time(),
+    'default' => \time(),
     'exclude' => true,
     'filter' => true,
     'sorting' => true,

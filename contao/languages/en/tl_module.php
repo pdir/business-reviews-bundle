@@ -15,6 +15,8 @@
  * file that was distributed with this source code.
  */
 
+use Contao\System;
+
 System::loadLanguageFile('tl_content');
 
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_text_legend'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_text_legend'];

@@ -20,6 +20,7 @@ declare(strict_types=1);
 namespace Pdir\BusinessReviewsBundle\Backend;
 
 use Contao\BackendModule;
+use Contao\Environment;
 
 class BusinessReviewsSetup extends BackendModule
 {
@@ -61,18 +62,18 @@ class BusinessReviewsSetup extends BackendModule
      */
     protected $strDomain = '';
 
-    public static function strPlatforms($and)
+    public static function strPlatforms($and): string
     {
         return
-            implode(', ', \array_slice(self::PLATFORMS, 0, -1)).
+            \implode(', ', \array_slice(self::PLATFORMS, 0, -1)).
             " $and ".
             self::PLATFORMS[\count(self::PLATFORMS) - 1];
     }
 
-    public static function selectPlatforms()
+    public static function selectPlatforms(): string
     {
         return '<select class="tl_select"><option>'.
-            implode('</option><option>', self::PLATFORMS).
+            \implode('</option><option>', self::PLATFORMS).
             '</option></select>';
     }
 
@@ -85,10 +86,10 @@ class BusinessReviewsSetup extends BackendModule
     {
         $this->Template->extMode = self::MODE;
         $this->Template->strBundleName = $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup'][0];
-        $this->Template->strBundleGreeting = sprintf($GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['greeting'], $this->Template->strBundleName);
+        $this->Template->strBundleGreeting = \sprintf($GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['greeting'], $this->Template->strBundleName);
         $this->Template->version = self::VERSION;
-        $this->Template->hostname = gethostname();
-        $this->Template->ip = \Environment::get('server');
+        $this->Template->hostname = \gethostname();
+        $this->Template->ip = Environment::get('server');
         $this->Template->domain = $this->strDomain;
 
         $this->Template->arrEditions = [
@@ -116,10 +117,10 @@ class BusinessReviewsSetup extends BackendModule
 
         $this->Template->allVersions = sprintf(
             $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['template_p'],
-            implode(', ',
+            \implode(', ',
                 array_map(
                     function($version) { return $version['product']; },
-                    array_filter(
+                    \array_filter(
                         $GLOBALS['TL_LANG']['MOD']['businessReviewsSetup']['editions'],
                         function($key) { return $key !== 'free'; },
                         ARRAY_FILTER_USE_KEY
