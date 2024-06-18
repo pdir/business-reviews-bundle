@@ -404,7 +404,7 @@ $GLOBALS['TL_DCA'][$tableName]['fields']['floating'] = [
 $GLOBALS['TL_DCA'][$tableName]['fields']['imagemargin'] = [
     'exclude' => true,
     'inputType' => 'trbl',
-    'options' => $GLOBALS['TL_CSS_UNITS'],
+    'options' => ['px', '%', 'em', 'rem'],
     'eval' => ['includeBlankOption' => true, 'tl_class' => 'w50'],
     'sql' => "varchar(128) NOT NULL default ''",
 ];
