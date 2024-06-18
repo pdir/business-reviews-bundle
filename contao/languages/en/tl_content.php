@@ -24,8 +24,10 @@ $strPlatforms = BusinessReviewsSetup::strPlatforms('oder');
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_legend'] = 'License notice';
 
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rText'] = 'Text Widget';
-$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rCarousel'] = 'Carousel widget (Full version or plugin required)';
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rStars'] = 'Star Widget (Full version or plugin required)';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rCarousel'] = 'Carousel widget (Full version or plugin required)';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rSticker'] = 'Sticker widget (Full version or plugin required)';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type_options']['rCard'] = 'Card widget (Full version or plugin required)';
 
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options']['LocalBusiness'] = 'Local business';
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options']['Product'] = 'Product';
@@ -35,7 +37,7 @@ $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type_options']['Event'] = 'Even
 
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_type'] = ['Widget type', 'Select the widget you want for the frontend here.'];
 
-$GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_legend'] = ' Review as Text Widget';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_legend'] = 'Review as Text Widget';
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_type'] = ['Element type', 'Enter the element type here. (http://schema.org/)'];
 
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_review_legend'] = 'What is rated?';
@@ -43,7 +45,7 @@ $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_subtype_legend'] = 'More detail
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_element_subtype'] = ['Subject of the rating', 'Select the subject of your rating here (e.g. a restaurant etc., see: http://schema.org/)'];
 
 // recipe
-$GLOBALS['TL_LANG'][$tableName]['pdir_rw_recipeTegend'] = 'Preparation information';
+$GLOBALS['TL_LANG'][$tableName]['pdir_rw_recipe_legend'] = 'Preparation information';
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_prepTime'] = ['Preparation time', 'Here you can enter the time for preparation.'];
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_cookTime'] = ['Cooking time', 'Here you can enter the time for cooking.', 'cooking time.'];
 $GLOBALS['TL_LANG'][$tableName]['pdir_rw_text_totalTime'] = ['Total time', 'Here you can enter the over all time.', 'total time.'];
