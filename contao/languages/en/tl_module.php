@@ -17,7 +17,7 @@
 
 use Contao\System;
 
-System::loadLanguageFile('tl_content');
+System::loadLanguageFile('tl_content', 'en');
 
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_text_legend'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_text_legend'];
 $GLOBALS['TL_LANG']['tl_module']['pdir_rw_legend'] = $GLOBALS['TL_LANG']['tl_content']['pdir_rw_legend'];
